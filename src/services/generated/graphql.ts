@@ -28,72 +28,6 @@ export type Scalars = {
   Upload: { input: any; output: any; }
 };
 
-export type About = {
-  __typename?: 'About';
-  AuthorName?: Maybe<Scalars['String']['output']>;
-  createdAt?: Maybe<Scalars['DateTime']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  img?: Maybe<UploadFileEntityResponse>;
-  logo?: Maybe<UploadFileEntityResponse>;
-  publishedAt?: Maybe<Scalars['DateTime']['output']>;
-  repo_url?: Maybe<Scalars['String']['output']>;
-  slug?: Maybe<Scalars['String']['output']>;
-  startedAt?: Maybe<Scalars['Date']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  website_url?: Maybe<Scalars['String']['output']>;
-};
-
-export type AboutEntity = {
-  __typename?: 'AboutEntity';
-  attributes?: Maybe<About>;
-  id?: Maybe<Scalars['ID']['output']>;
-};
-
-export type AboutEntityResponse = {
-  __typename?: 'AboutEntityResponse';
-  data?: Maybe<AboutEntity>;
-};
-
-export type AboutEntityResponseCollection = {
-  __typename?: 'AboutEntityResponseCollection';
-  data: Array<AboutEntity>;
-  meta: ResponseCollectionMeta;
-};
-
-export type AboutFiltersInput = {
-  AuthorName?: InputMaybe<StringFilterInput>;
-  and?: InputMaybe<Array<InputMaybe<AboutFiltersInput>>>;
-  createdAt?: InputMaybe<DateTimeFilterInput>;
-  description?: InputMaybe<StringFilterInput>;
-  id?: InputMaybe<IdFilterInput>;
-  not?: InputMaybe<AboutFiltersInput>;
-  or?: InputMaybe<Array<InputMaybe<AboutFiltersInput>>>;
-  publishedAt?: InputMaybe<DateTimeFilterInput>;
-  repo_url?: InputMaybe<StringFilterInput>;
-  slug?: InputMaybe<StringFilterInput>;
-  startedAt?: InputMaybe<DateFilterInput>;
-  subtitle?: InputMaybe<StringFilterInput>;
-  title?: InputMaybe<StringFilterInput>;
-  updatedAt?: InputMaybe<DateTimeFilterInput>;
-  website_url?: InputMaybe<StringFilterInput>;
-};
-
-export type AboutInput = {
-  AuthorName?: InputMaybe<Scalars['String']['input']>;
-  description?: InputMaybe<Scalars['String']['input']>;
-  img?: InputMaybe<Scalars['ID']['input']>;
-  logo?: InputMaybe<Scalars['ID']['input']>;
-  publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
-  repo_url?: InputMaybe<Scalars['String']['input']>;
-  slug?: InputMaybe<Scalars['String']['input']>;
-  startedAt?: InputMaybe<Scalars['Date']['input']>;
-  subtitle?: InputMaybe<Scalars['String']['input']>;
-  title?: InputMaybe<Scalars['String']['input']>;
-  website_url?: InputMaybe<Scalars['String']['input']>;
-};
-
 export type App = {
   __typename?: 'App';
   CTA?: Maybe<Array<Maybe<ComponentBlocksCta>>>;
@@ -1227,7 +1161,6 @@ export type ComponentEcommercePrices = {
   __typename?: 'ComponentEcommercePrices';
   amount?: Maybe<Scalars['Float']['output']>;
   badge?: Maybe<Scalars['String']['output']>;
-  currency?: Maybe<CurrencyEntityResponse>;
   discount_percentage?: Maybe<Scalars['Float']['output']>;
   discounted_amount?: Maybe<Scalars['Float']['output']>;
   id: Scalars['ID']['output'];
@@ -1239,7 +1172,6 @@ export type ComponentEcommercePricesFiltersInput = {
   amount?: InputMaybe<FloatFilterInput>;
   and?: InputMaybe<Array<InputMaybe<ComponentEcommercePricesFiltersInput>>>;
   badge?: InputMaybe<StringFilterInput>;
-  currency?: InputMaybe<CurrencyFiltersInput>;
   discount_percentage?: InputMaybe<FloatFilterInput>;
   discounted_amount?: InputMaybe<FloatFilterInput>;
   isDiscounted?: InputMaybe<BooleanFilterInput>;
@@ -1251,7 +1183,6 @@ export type ComponentEcommercePricesFiltersInput = {
 export type ComponentEcommercePricesInput = {
   amount?: InputMaybe<Scalars['Float']['input']>;
   badge?: InputMaybe<Scalars['String']['input']>;
-  currency?: InputMaybe<Scalars['ID']['input']>;
   discount_percentage?: InputMaybe<Scalars['Float']['input']>;
   discounted_amount?: InputMaybe<Scalars['Float']['input']>;
   id?: InputMaybe<Scalars['ID']['input']>;
@@ -1434,53 +1365,6 @@ export type ComponentSharedSocialNetworksInput = {
   name?: InputMaybe<Scalars['String']['input']>;
   note?: InputMaybe<Scalars['String']['input']>;
   showOnPage?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type Currency = {
-  __typename?: 'Currency';
-  code?: Maybe<Scalars['String']['output']>;
-  createdAt?: Maybe<Scalars['DateTime']['output']>;
-  name?: Maybe<Scalars['String']['output']>;
-  publishedAt?: Maybe<Scalars['DateTime']['output']>;
-  symbol?: Maybe<Scalars['String']['output']>;
-  updatedAt?: Maybe<Scalars['DateTime']['output']>;
-};
-
-export type CurrencyEntity = {
-  __typename?: 'CurrencyEntity';
-  attributes?: Maybe<Currency>;
-  id?: Maybe<Scalars['ID']['output']>;
-};
-
-export type CurrencyEntityResponse = {
-  __typename?: 'CurrencyEntityResponse';
-  data?: Maybe<CurrencyEntity>;
-};
-
-export type CurrencyEntityResponseCollection = {
-  __typename?: 'CurrencyEntityResponseCollection';
-  data: Array<CurrencyEntity>;
-  meta: ResponseCollectionMeta;
-};
-
-export type CurrencyFiltersInput = {
-  and?: InputMaybe<Array<InputMaybe<CurrencyFiltersInput>>>;
-  code?: InputMaybe<StringFilterInput>;
-  createdAt?: InputMaybe<DateTimeFilterInput>;
-  id?: InputMaybe<IdFilterInput>;
-  name?: InputMaybe<StringFilterInput>;
-  not?: InputMaybe<CurrencyFiltersInput>;
-  or?: InputMaybe<Array<InputMaybe<CurrencyFiltersInput>>>;
-  publishedAt?: InputMaybe<DateTimeFilterInput>;
-  symbol?: InputMaybe<StringFilterInput>;
-  updatedAt?: InputMaybe<DateTimeFilterInput>;
-};
-
-export type CurrencyInput = {
-  code?: InputMaybe<Scalars['String']['input']>;
-  name?: InputMaybe<Scalars['String']['input']>;
-  publishedAt?: InputMaybe<Scalars['DateTime']['input']>;
-  symbol?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type Cwk = {
@@ -2037,7 +1921,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type GenericMorph = About | App | AromaRestaurant | Ayah | BlogAuthor | Category | CodingTech | ComponentBlocksBlock | ComponentBlocksCta | ComponentBlocksItem | ComponentBlocksPrice | ComponentBlocksProjectItem | ComponentBlocksRichSectionTitle | ComponentBlocksRichText | ComponentBlocksRichText2 | ComponentBlocksRichTextFull | ComponentBlocksSectionTitle | ComponentBlocksSettings | ComponentBusinessContact | ComponentBusinessGoogleMapLocation | ComponentBusinessHero | ComponentBusinessMenuItem | ComponentBusinessOferta | ComponentBusinessOpenHours | ComponentBusinessServiceItem | ComponentBusinessServiceLight | ComponentBusinessStatistics | ComponentBusinessTestimonialItem | ComponentBusinessTransaction | ComponentCwkJobExperience | ComponentEcommerceCustomer | ComponentEcommercePrices | ComponentEcommerceStock | ComponentIdrizUmrahBlockUmrahPrice | ComponentSharedFaq | ComponentSharedMedia | ComponentSharedQuote | ComponentSharedRichText | ComponentSharedSeo | ComponentSharedSocialNetworks | Currency | Cwk | CwkUser | Endry2008 | FamilyIktisat | Guestbook | I18NLocale | IdrizTravelUmra | IktisatAccount | IktisatCategory | IktisatDebt | IktisatProfile | IktisatUser | IqraKitap | IqraQuran | MySpokenLanguage | Order | PointFood | Post | Product | Store | StrapiGoogleAuthGoogleCredential | Surah | Tag | UmrahHotel | UmrahTourGuide | UmrahTrip | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = App | AromaRestaurant | Ayah | BlogAuthor | Category | CodingTech | ComponentBlocksBlock | ComponentBlocksCta | ComponentBlocksItem | ComponentBlocksPrice | ComponentBlocksProjectItem | ComponentBlocksRichSectionTitle | ComponentBlocksRichText | ComponentBlocksRichText2 | ComponentBlocksRichTextFull | ComponentBlocksSectionTitle | ComponentBlocksSettings | ComponentBusinessContact | ComponentBusinessGoogleMapLocation | ComponentBusinessHero | ComponentBusinessMenuItem | ComponentBusinessOferta | ComponentBusinessOpenHours | ComponentBusinessServiceItem | ComponentBusinessServiceLight | ComponentBusinessStatistics | ComponentBusinessTestimonialItem | ComponentBusinessTransaction | ComponentCwkJobExperience | ComponentEcommerceCustomer | ComponentEcommercePrices | ComponentEcommerceStock | ComponentIdrizUmrahBlockUmrahPrice | ComponentSharedFaq | ComponentSharedMedia | ComponentSharedQuote | ComponentSharedRichText | ComponentSharedSeo | ComponentSharedSocialNetworks | Cwk | CwkUser | Endry2008 | FamilyIktisat | Guestbook | I18NLocale | IdrizTravelUmra | IktisatAccount | IktisatCategory | IktisatDebt | IktisatProfile | IktisatUser | IqraKitap | IqraQuran | MySpokenLanguage | Order | PointFood | Post | Product | Store | StrapiGoogleAuthGoogleCredential | Surah | Tag | UmrahHotel | UmrahTourGuide | UmrahTrip | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type Guestbook = {
   __typename?: 'Guestbook';
@@ -2573,13 +2457,11 @@ export type Mutation = {
   __typename?: 'Mutation';
   /** Change user password. Confirm with the current password. */
   changePassword?: Maybe<UsersPermissionsLoginPayload>;
-  createAbout?: Maybe<AboutEntityResponse>;
   createApp?: Maybe<AppEntityResponse>;
   createAyah?: Maybe<AyahEntityResponse>;
   createBlogAuthor?: Maybe<BlogAuthorEntityResponse>;
   createCategory?: Maybe<CategoryEntityResponse>;
   createCodingTech?: Maybe<CodingTechEntityResponse>;
-  createCurrency?: Maybe<CurrencyEntityResponse>;
   createCwkUser?: Maybe<CwkUserEntityResponse>;
   createEndry2008Localization?: Maybe<Endry2008EntityResponse>;
   createGuestbook?: Maybe<GuestbookEntityResponse>;
@@ -2592,6 +2474,7 @@ export type Mutation = {
   createOrder?: Maybe<OrderEntityResponse>;
   createPointFoodLocalization?: Maybe<PointFoodEntityResponse>;
   createPost?: Maybe<PostEntityResponse>;
+  createPostLocalization?: Maybe<PostEntityResponse>;
   createProduct?: Maybe<ProductEntityResponse>;
   createSurah?: Maybe<SurahEntityResponse>;
   createTag?: Maybe<TagEntityResponse>;
@@ -2605,14 +2488,12 @@ export type Mutation = {
   createUsersPermissionsRole?: Maybe<UsersPermissionsCreateRolePayload>;
   /** Create a new user */
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
-  deleteAbout?: Maybe<AboutEntityResponse>;
   deleteApp?: Maybe<AppEntityResponse>;
   deleteAromaRestaurant?: Maybe<AromaRestaurantEntityResponse>;
   deleteAyah?: Maybe<AyahEntityResponse>;
   deleteBlogAuthor?: Maybe<BlogAuthorEntityResponse>;
   deleteCategory?: Maybe<CategoryEntityResponse>;
   deleteCodingTech?: Maybe<CodingTechEntityResponse>;
-  deleteCurrency?: Maybe<CurrencyEntityResponse>;
   deleteCwk?: Maybe<CwkEntityResponse>;
   deleteCwkUser?: Maybe<CwkUserEntityResponse>;
   deleteEndry2008?: Maybe<Endry2008EntityResponse>;
@@ -2655,14 +2536,12 @@ export type Mutation = {
   removeFile?: Maybe<UploadFileEntityResponse>;
   /** Reset user password. Confirm with a code (resetToken from forgotPassword) */
   resetPassword?: Maybe<UsersPermissionsLoginPayload>;
-  updateAbout?: Maybe<AboutEntityResponse>;
   updateApp?: Maybe<AppEntityResponse>;
   updateAromaRestaurant?: Maybe<AromaRestaurantEntityResponse>;
   updateAyah?: Maybe<AyahEntityResponse>;
   updateBlogAuthor?: Maybe<BlogAuthorEntityResponse>;
   updateCategory?: Maybe<CategoryEntityResponse>;
   updateCodingTech?: Maybe<CodingTechEntityResponse>;
-  updateCurrency?: Maybe<CurrencyEntityResponse>;
   updateCwk?: Maybe<CwkEntityResponse>;
   updateCwkUser?: Maybe<CwkUserEntityResponse>;
   updateEndry2008?: Maybe<Endry2008EntityResponse>;
@@ -2706,11 +2585,6 @@ export type MutationChangePasswordArgs = {
 };
 
 
-export type MutationCreateAboutArgs = {
-  data: AboutInput;
-};
-
-
 export type MutationCreateAppArgs = {
   data: AppInput;
 };
@@ -2733,11 +2607,6 @@ export type MutationCreateCategoryArgs = {
 
 export type MutationCreateCodingTechArgs = {
   data: CodingTechInput;
-};
-
-
-export type MutationCreateCurrencyArgs = {
-  data: CurrencyInput;
 };
 
 
@@ -2802,6 +2671,14 @@ export type MutationCreatePointFoodLocalizationArgs = {
 
 export type MutationCreatePostArgs = {
   data: PostInput;
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
+};
+
+
+export type MutationCreatePostLocalizationArgs = {
+  data?: InputMaybe<PostInput>;
+  id?: InputMaybe<Scalars['ID']['input']>;
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
 };
 
 
@@ -2863,11 +2740,6 @@ export type MutationCreateUsersPermissionsUserArgs = {
 };
 
 
-export type MutationDeleteAboutArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type MutationDeleteAppArgs = {
   id: Scalars['ID']['input'];
 };
@@ -2889,11 +2761,6 @@ export type MutationDeleteCategoryArgs = {
 
 
 export type MutationDeleteCodingTechArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type MutationDeleteCurrencyArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -2955,6 +2822,7 @@ export type MutationDeletePointFoodArgs = {
 
 export type MutationDeletePostArgs = {
   id: Scalars['ID']['input'];
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
 };
 
 
@@ -3049,12 +2917,6 @@ export type MutationResetPasswordArgs = {
 };
 
 
-export type MutationUpdateAboutArgs = {
-  data: AboutInput;
-  id: Scalars['ID']['input'];
-};
-
-
 export type MutationUpdateAppArgs = {
   data: AppInput;
   id: Scalars['ID']['input'];
@@ -3086,12 +2948,6 @@ export type MutationUpdateCategoryArgs = {
 
 export type MutationUpdateCodingTechArgs = {
   data: CodingTechInput;
-  id: Scalars['ID']['input'];
-};
-
-
-export type MutationUpdateCurrencyArgs = {
-  data: CurrencyInput;
   id: Scalars['ID']['input'];
 };
 
@@ -3196,6 +3052,7 @@ export type MutationUpdatePointFoodArgs = {
 export type MutationUpdatePostArgs = {
   data: PostInput;
   id: Scalars['ID']['input'];
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
 };
 
 
@@ -3458,6 +3315,8 @@ export type Post = {
   date?: Maybe<Scalars['Date']['output']>;
   desc?: Maybe<Scalars['String']['output']>;
   img?: Maybe<UploadFileEntityResponse>;
+  locale?: Maybe<Scalars['String']['output']>;
+  localizations?: Maybe<PostRelationResponseCollection>;
   my_developed_apps?: Maybe<AppRelationResponseCollection>;
   publishedAt?: Maybe<Scalars['DateTime']['output']>;
   slug?: Maybe<Scalars['String']['output']>;
@@ -3469,6 +3328,14 @@ export type Post = {
 
 export type PostCategoriesArgs = {
   filters?: InputMaybe<CategoryFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+
+export type PostLocalizationsArgs = {
+  filters?: InputMaybe<PostFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3516,6 +3383,8 @@ export type PostFiltersInput = {
   date?: InputMaybe<DateFilterInput>;
   desc?: InputMaybe<StringFilterInput>;
   id?: InputMaybe<IdFilterInput>;
+  locale?: InputMaybe<StringFilterInput>;
+  localizations?: InputMaybe<PostFiltersInput>;
   my_developed_apps?: InputMaybe<AppFiltersInput>;
   not?: InputMaybe<PostFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<PostFiltersInput>>>;
@@ -3537,6 +3406,11 @@ export type PostInput = {
   slug?: InputMaybe<Scalars['String']['input']>;
   tags?: InputMaybe<Array<InputMaybe<Scalars['ID']['input']>>>;
   title?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PostRelationResponseCollection = {
+  __typename?: 'PostRelationResponseCollection';
+  data: Array<PostEntity>;
 };
 
 export type Product = {
@@ -3650,8 +3524,6 @@ export enum PublicationState {
 
 export type Query = {
   __typename?: 'Query';
-  about?: Maybe<AboutEntityResponse>;
-  abouts?: Maybe<AboutEntityResponseCollection>;
   app?: Maybe<AppEntityResponse>;
   apps?: Maybe<AppEntityResponseCollection>;
   aromaRestaurant?: Maybe<AromaRestaurantEntityResponse>;
@@ -3663,8 +3535,6 @@ export type Query = {
   category?: Maybe<CategoryEntityResponse>;
   codingTech?: Maybe<CodingTechEntityResponse>;
   codingTechs?: Maybe<CodingTechEntityResponseCollection>;
-  currencies?: Maybe<CurrencyEntityResponseCollection>;
-  currency?: Maybe<CurrencyEntityResponse>;
   cwk?: Maybe<CwkEntityResponse>;
   cwkUser?: Maybe<CwkUserEntityResponse>;
   cwkUsers?: Maybe<CwkUserEntityResponseCollection>;
@@ -3717,19 +3587,6 @@ export type Query = {
   usersPermissionsRoles?: Maybe<UsersPermissionsRoleEntityResponseCollection>;
   usersPermissionsUser?: Maybe<UsersPermissionsUserEntityResponse>;
   usersPermissionsUsers?: Maybe<UsersPermissionsUserEntityResponseCollection>;
-};
-
-
-export type QueryAboutArgs = {
-  id?: InputMaybe<Scalars['ID']['input']>;
-};
-
-
-export type QueryAboutsArgs = {
-  filters?: InputMaybe<AboutFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  publicationState?: InputMaybe<PublicationState>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
@@ -3800,19 +3657,6 @@ export type QueryCodingTechsArgs = {
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-export type QueryCurrenciesArgs = {
-  filters?: InputMaybe<CurrencyFiltersInput>;
-  pagination?: InputMaybe<PaginationArg>;
-  publicationState?: InputMaybe<PublicationState>;
-  sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-
-export type QueryCurrencyArgs = {
-  id?: InputMaybe<Scalars['ID']['input']>;
 };
 
 
@@ -3978,11 +3822,13 @@ export type QueryPointFoodArgs = {
 
 export type QueryPostArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
 };
 
 
 export type QueryPostsArgs = {
   filters?: InputMaybe<PostFiltersInput>;
+  locale?: InputMaybe<Scalars['I18NLocaleCode']['input']>;
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;

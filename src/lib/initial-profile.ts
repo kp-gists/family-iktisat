@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/react'
 import React from 'react'
+// @ts-ignore
 import { redirect } from 'next/navigation'
 import Stripe from 'stripe'
 import { updateStripeCustomerId } from '@/services/axios'
