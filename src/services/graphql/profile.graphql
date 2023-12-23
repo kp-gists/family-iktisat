@@ -1,0 +1,32 @@
+query  getUserProfile($email: String){
+  iktisatUsers(filters:{email:{eq:$email}}) {
+   data {
+      id
+      attributes {
+        email
+        isSoftDeleted
+        full_name
+        img_url
+        iktisat_profile {
+          data {
+            id
+            attributes {
+              isOnBoarded
+              isMarried
+              settings {
+                time_period
+                week_starts
+                isDarkMode
+                showTransactionNote
+                isCarryOver
+              }
+            }
+          }
+        }
+        stripe_customer_id
+        createdAt
+      }
+    }
+  }
+}
+  

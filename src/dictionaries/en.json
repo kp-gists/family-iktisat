@@ -1,0 +1,15 @@
+{
+  "navigation":{
+    "home":"Home",
+    "about":"About"
+  },
+  "page":{
+    "home":{
+      "title":"Welcome to My Family Iktisat",
+      "description":"A simple app for Self Economy, Family Economy keeping track of daily, monthly and yearly expenses,savings and debts "
+    },
+    "about":{
+      "title":"About Us Page"
+    }
+  }
+}

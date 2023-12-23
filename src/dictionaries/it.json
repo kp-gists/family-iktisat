@@ -1,0 +1,15 @@
+{
+  "navigation":{
+    "home":"Casa",
+    "about":"Chi siamo"
+  },
+  "page":{
+    "home":{
+      "title":"Benvenuti nella mia famiglia Iktisat",
+      "description":"Una semplice app per l'economia personale e familiare che tiene traccia delle spese, dei risparmi e dei debiti giornalieri, mensili e annuali"
+    },
+    "about":{
+      "title":"Chi siamo"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "navigation":{
+    "home":"Shtepia",
+    "about":"Rreth nesh"
+  },
+  "page":{
+    "home":{
+      "title":"Mirësevini në Familja Jonë Iktisat",
+      "description":"Një aplikacion i thjeshtë për ekonomu personale, ekonominë familjare që ruan historikun e  shpenzimeve, kursimeve dhe borxheve ditore, mujore dhe vjetore"
+    },
+    "about":{
+      "title":"Rreth nesh"
+    }
+  }
+}
